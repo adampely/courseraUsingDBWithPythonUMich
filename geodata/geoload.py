@@ -38,7 +38,7 @@ for line in fh:
         continue
     except:
         pass
-
+    
     print 'Resolving', address
     url = serviceurl + urllib.urlencode({"sensor":"false", "address": address})
     print 'Retrieving', url

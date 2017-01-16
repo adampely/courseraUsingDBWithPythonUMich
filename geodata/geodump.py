@@ -5,7 +5,7 @@ import codecs
 conn = sqlite3.connect('geodata.sqlite')
 cur = conn.cursor()
 
-cur.execute('SELECT * FROM Locations')
+cur.execute('SELECT * FROM Locations WHERE address LIKE "Duke%"')
 fhand = codecs.open('where.js','w', "utf-8")
 fhand.write("myData = [\n")
 count = 0
